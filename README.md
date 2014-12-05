@@ -10,7 +10,7 @@ place the element *immediately* below the element you'd like to detect local cli
 
 upon clicking, my-element will have a 'clickedLocally' variable assigned to it ... which will be true if the click was within the my-element and false if outside of it
 
-so you'll in my-element you'll want to check for the 'clickedLocally' within an async callback to ensure the necessary methods have been run local-click-detector; e.g.:
+in my-element you'll want to check for the 'clickedLocally' within an async callback to ensure the necessary methods have been run in local-click-detector; e.g.:
 
 ```
   Polymer 'my-element', 
