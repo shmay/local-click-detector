@@ -1,0 +1,11 @@
+{
+  "name":"local-click-detector",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "",
+    "grunt-vulcanize": "",
+    "grunt-contrib-watch": "",
+    "load-grunt-tasks":"",
+    "grunt-contrib-coffee": ""
+  }
+}

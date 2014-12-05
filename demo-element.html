@@ -1,0 +1,35 @@
+<polymer-element name="demo-element">
+  <template>
+    <style>
+      :host {
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        border: 1px solid black;
+        width:100px;
+        height:100px;
+        padding: 2px;
+      }
+    </style>
+
+    <local-click-detector id='det'></local-click-detector>
+
+    Clicked locally? {{ans}}
+
+  </template>
+
+  <script type="text/javascript">
+    Polymer('demo-element', {
+      ans: 'nah',
+      ready: function() {
+        _this = this;
+        document.addEventListener('click', function(e) {
+          _this.async(function() {
+            _this.ans = _this.clickedLocally ? 'yah' : 'nah';
+          });
+        });
+      },
+
+    });
+  </script>
+</polymer-element>
