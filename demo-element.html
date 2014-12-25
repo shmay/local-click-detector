@@ -18,17 +18,20 @@
 
   </template>
 
-  <script type="text/javascript">
+  <script>
     Polymer('demo-element', {
       ans: 'nah',
       ready: function() {
-        _this = this;
+        console.log('ready');
+        var _this = this;
+
         document.addEventListener('click', function(e) {
           _this.async(function() {
             _this.ans = _this.clickedLocally ? 'yah' : 'nah';
+            console.log(_this.ans);
           });
         });
-      },
+      }
 
     });
   </script>
