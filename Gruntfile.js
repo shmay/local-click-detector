@@ -27,6 +27,7 @@ module.exports = function(grunt) {
       default: {
         options: {
           csp: true,
+          inline: true,
           strip: true
         },
         files: {
