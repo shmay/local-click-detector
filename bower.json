@@ -2,8 +2,6 @@
   "name": "local-click-detector",
   "version": "0.0.2",
   "dependencies": {
-    "core-elements": "Polymer/core-elements#^0.5.2",
-    "paper-elements": "Polymer/paper-elements#^0.5.2",
     "bowser": "ded/bowser",
     "polymer": "Polymer/polymer#^0.5.2"
   },

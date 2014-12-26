@@ -3,7 +3,6 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
-
     coffee: {
       dist: {
         files: [{
@@ -28,10 +27,10 @@ module.exports = function(grunt) {
         options: {
           csp: true,
           inline: true,
-          strip: true
+          verbose: true
         },
         files: {
-          'dist/index.html': 'demo.html'
+          'dist/index.html': 'index.html'
         }
       }
     }
