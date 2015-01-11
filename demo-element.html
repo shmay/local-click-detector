@@ -10,17 +10,35 @@
         height:100px;
         padding: 2px;
       }
+
+      #blah {
+        position: absolute;
+        left: 100px;
+        top: 200px;
+      }
     </style>
 
-    <local-click-detector id='det'></local-click-detector>
+    <template if='{{show}}'>
+      <local-click-detector id='det'></local-click-detector>
+      Clicked locally? {{ans}}
+    </template>
 
-    Clicked locally? {{ans}}
+    <span hidden?='{{show}}'>removed from dom</span>
+
+    <div id='blah'>
+      <a on-click='{{toggle}}' href='#'>remove/insert from dom to test for mem leaks</a>
+    </div>
 
   </template>
 
   <script>
     Polymer('demo-element', {
+      show: true,
       ans: 'nah',
+      toggle: function(e) {
+        e.preventDefault();
+        this.show = !this.show;
+      },
       ready: function() {
         console.log('ready');
         var _this = this;

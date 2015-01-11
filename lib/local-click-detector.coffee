@@ -30,5 +30,5 @@ Polymer "local-click-detector",
     h.addEventListener @listenEvent, @localClickListener
 
   rmListeners: ->
-    h.removeEventListener @listenEvent, @localClickListener
+    @host.removeEventListener @listenEvent, @localClickListener
     document.removeEventListener @listenEvent, @docClickListener
